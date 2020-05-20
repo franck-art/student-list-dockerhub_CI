@@ -8,10 +8,11 @@ networks:
 
 services:
   sut:
-    context: .
-    dockerfile: Dockerfile
-  command: /run_tests.sh
-  volumes:
-    - ./student_age.json:/data/student_age.json
-  networks:
-    - test-net
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: /run_tests.sh
+    volumes:
+      - ./student_age.json:/data/student_age.json
+    networks:
+      - test-net
