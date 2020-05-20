@@ -1,0 +1,17 @@
+version: '2.1'
+
+#we need to run test to validate builded image
+
+netwoks:
+  test-net:
+
+
+services:
+  sut:
+    context: .
+    dockerfile: Dockerfile
+  command: /run_tests.sh
+  volumes:
+    - ./student_age.json:/data/student_age.json
+  networks:
+    - test-net
