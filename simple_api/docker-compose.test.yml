@@ -2,7 +2,7 @@ version: '2.1'
 
 #we need to run test to validate builded image
 
-netwoks:
+networks:
   test-net:
 
 
