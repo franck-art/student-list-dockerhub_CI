@@ -11,8 +11,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-  command: /run_tests.sh
-  volumes:
-    - ./student_age.json:/data/student_age.json
-  networks:
-    - test-net
+    command: /run_tests.sh
+    volumes:
+      - ./student_age.json:/data/student_age.json
+    networks:
+      - test-net
